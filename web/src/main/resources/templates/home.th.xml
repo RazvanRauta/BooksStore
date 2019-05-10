@@ -1,0 +1,28 @@
+<?xml version="1.0"?>
+<thlogic>
+
+    <attr sel="#assets"
+          th:replace="~{fragments/assets :: assetsFragment}"/>
+
+    <attr sel="#headFragment"
+          th:replace="~{fragments/head :: headFragment}"/>
+
+    <attr sel="#booksTable"
+          th:each="book : ${allBooks}"/>
+
+    <attr sel="#title"
+          th:text="${book.title}"/>
+
+    <attr sel="#author"
+          th:text="${book.author}"/>
+
+    <attr sel="#year"
+          th:text="${book.year}"/>
+
+    <attr sel="#category"
+          th:text="${book.category.name}"/>
+
+    <attr sel="#price"
+          th:text="${book.price}"/>
+
+</thlogic>

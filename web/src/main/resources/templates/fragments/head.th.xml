@@ -1,0 +1,9 @@
+<thlogic>
+
+    <attr sel="#headFragment"
+          th:fragment="headFragment"
+          th:remove="tag"/>
+    <attr sel="#bootstrapCss"
+          th:href="@{/webjars/bootstrap/4.3.1/css/bootstrap.css}"/>
+
+</thlogic>

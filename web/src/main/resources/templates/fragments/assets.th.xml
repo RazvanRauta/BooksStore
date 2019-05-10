@@ -1,0 +1,9 @@
+<thlogic>
+
+    <attr sel="#assets"
+          th:fragment="assetsFragment"
+          th:remove="tag"/>
+    <attr sel="#bootstrapJs"
+          th:src="@{/webjars/bootstrap/4.3.1/js/bootstrap.js}"/>
+
+</thlogic>
