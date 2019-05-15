@@ -9,6 +9,7 @@ package com.bookstore.shop.persistence.entity;
 import lombok.Data;
 
 import javax.persistence.*;
+import java.util.Collection;
 import java.util.Date;
 
 enum Gender {
@@ -17,7 +18,6 @@ enum Gender {
 }
 
 @Entity
-@Table(name = "USER")
 @Data
 public class User {
 
@@ -25,19 +25,14 @@ public class User {
     @GeneratedValue(strategy= GenerationType.AUTO)
     private Long id;
 
-    @Column(name="FIRST_NAME", length=100, nullable=false)
     private String firstName;
 
-    @Column(name="LAST_NAME", length=100, nullable=false)
     private String lastName;
 
-    @Column(name="USERNAME", length=100, nullable=false, unique=true)
     private String username;
 
-    @Column(name="PASSWORD", length=100, nullable=false)
     private String password;
 
-    @Column(name="EMAIL", length=100, nullable=false, unique=true)
     private String email;
 
     @ManyToOne
@@ -48,5 +43,14 @@ public class User {
 
     @Enumerated(EnumType.STRING)
     private Gender gender;
+
+    @ManyToMany
+    @JoinTable(
+            name = "users_roles",
+            joinColumns = @JoinColumn(
+                    name = "user_id", referencedColumnName = "id"),
+            inverseJoinColumns = @JoinColumn(
+                    name = "role_id", referencedColumnName = "id"))
+    private Collection<Role> roles;
 
 }

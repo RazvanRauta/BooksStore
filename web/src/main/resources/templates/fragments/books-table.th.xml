@@ -1,0 +1,27 @@
+<thlogic>
+
+    <attr sel="#booksFragment"
+          th:fragment="booksTableFragment"/>
+
+    <attr sel="#booksTable"
+          th:each="book : ${allBooks}"/>
+
+    <attr sel="#title"
+          th:text="${book.title}"/>
+
+    <attr sel="#author"
+          th:text="${book.author}"/>
+
+    <attr sel="#year"
+          th:text="${book.year}"/>
+
+    <attr sel="#category"
+          th:text="${book.category.name}"/>
+
+    <attr sel="#price"
+          th:text="${book.price}"/>
+
+    <attr sel="#viewBook"
+          th:href="@{/seeBook/{id} (id=${book.id}) }"/>
+
+</thlogic>

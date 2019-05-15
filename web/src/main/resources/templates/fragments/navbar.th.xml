@@ -1,0 +1,15 @@
+<thlogic>
+
+    <attr sel="#navbar"
+          th:fragment="navbarFragment"
+          th:remove="tag"/>
+
+    <attr sel="#navbar-logo"
+          th:src="@{/img/book-logo.png}"/>
+
+    <attr sel="#profile-login"
+          th:href="@{/login}"/>
+    <attr sel="#add-book"
+
+          th:href="@{/add-book}"/>
+</thlogic>

@@ -1,0 +1,33 @@
+<thlogic>
+
+    <attr sel="#carouselExampleIndicators"
+          th:fragment="caruselFragment"/>
+
+    <!--    <attr sel="#carouselItems"-->
+    <!--          th:each="book : ${randomBooks}"/>-->
+    <!--&lt;!&ndash;    <attr sel="#image1"&ndash;&gt;-->
+    <!--&lt;!&ndash;          th:src="@{/img/{id}(id=${book.filePath})}"/>&ndash;&gt;-->
+    <!--&lt;!&ndash;    <attr sel="#image2"&ndash;&gt;-->
+    <!--&lt;!&ndash;          th:src="@{/img/{id}(id=${book.filePath2})}"/>&ndash;&gt;-->
+
+    <attr sel="#book0Link"
+          th:href="@{/seeBook/{id}(id=${randomBooks[0].id})}"/>
+    <attr sel="#book1Link"
+          th:href="@{/seeBook/{id}(id=${randomBooks[1].id})}"/>
+    <attr sel="#book2Link"
+          th:href="@{/seeBook/{id}(id=${randomBooks[2].id})}"/>
+
+    <attr sel="#book0Title"
+          th:text="${randomBooks[0].title}"/>
+    <attr sel="#book1Title"
+          th:text="${randomBooks[1].title}"/>
+    <attr sel="#book2Title"
+          th:text="${randomBooks[2].title}"/>
+
+    <attr sel="#book0Author"
+          th:text="${randomBooks[0].author}"/>
+    <attr sel="#book1Author"
+          th:text="${randomBooks[1].author}"/>
+    <attr sel="#book2Author"
+          th:text="${randomBooks[2].author}"/>
+</thlogic>

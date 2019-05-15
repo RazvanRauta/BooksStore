@@ -3,7 +3,9 @@
     <attr sel="#headFragment"
           th:fragment="headFragment"
           th:remove="tag"/>
-    <attr sel="#bootstrapCss"
-          th:href="@{/webjars/bootstrap/4.3.1/css/bootstrap.css}"/>
+    <attr sel="#icon"
+          th:href="@{/img/book-logo.png}"/>
 
+    <attr sel="#customCss"
+          th:href="@{/css/customCss.css}"/>
 </thlogic>

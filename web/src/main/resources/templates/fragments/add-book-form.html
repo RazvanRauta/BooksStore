@@ -1,0 +1,46 @@
+<!--
+*@author: Razvan Rauta
+*Date: 13.05.2019
+*Time: 16:31
+*
+-->
+
+<!DOCTYPE html>
+<html lang="en">
+<div id="add-book-form-fragment">
+    <h1>Add new book</h1>
+    <form id="add-book-form" method="post" style="margin-left: auto;margin-right: auto; width: 60%">
+        <div class="form-row">
+            <div class="form-group col-md-6">
+                <label for="inputAuthor">Author</label>
+                <input class="form-control" id="inputAuthor" placeholder="Author" required type="text">
+            </div>
+            <div class="form-group col-md-6">
+                <label for="inputTitle">Title</label>
+                <input class="form-control" id="inputTitle" placeholder="Title" required type="text">
+            </div>
+        </div>
+        <div class="form-group col-md-2">
+            <label for="inputYear">Year</label>
+            <input class="form-control" id="inputYear" placeholder="Year" required type="number">
+        </div>
+        <div class="form-group col-md-2">
+            <label for="inputStock">Stock</label>
+            <input class="form-control" id="inputStock" placeholder="Stock" required type="text">
+        </div>
+        <div class="form-group col-md-2">
+            <label for="inputCategory">Category</label>
+            <select class="form-control" id="inputCategory" required>
+                <option selected value="0">Select Category</option>
+                <option id="categoryOption"></option>
+            </select>
+        </div>
+        <div class="form-group col-md-2">
+            <label for="inputPrice">Price</label>
+            <input class="form-control" id="inputPrice" required type="number">
+        </div>
+
+        <button class="btn btn-primary" type="submit" value="Submit">Add Book</button>
+    </form>
+</div>
+</html>

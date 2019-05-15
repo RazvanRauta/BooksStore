@@ -10,13 +10,5 @@
     <attr sel="#navbarFragment"
           th:replace="~{fragments/navbar :: navbarFragment}"/>
 
-    <attr sel="#caruselFragment"
-          th:replace="~{fragments/carusel :: caruselFragment}"/>
-
-    <attr sel="#booksTable"
-          th:replace="~{fragments/books-table :: booksTableFragment}"/>
-
-    <attr sel="#footerFragment"
-          th:replace="~{fragments/footer :: footerFragment}"/>
 
 </thlogic>

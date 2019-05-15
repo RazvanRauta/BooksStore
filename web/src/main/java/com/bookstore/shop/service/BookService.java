@@ -19,4 +19,6 @@ public interface BookService {
     Book getBook(Long id);
     List<Book> getAllBooks();
     List<Book> getBooksByCategoryId(Long id);
+
+    List<Book> getThreeRandomBooks();
 }

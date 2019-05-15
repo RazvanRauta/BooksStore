@@ -11,6 +11,7 @@ import com.bookstore.shop.persistence.entity.Book;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
+import java.util.Collections;
 import java.util.List;
 
 @Service
@@ -53,5 +54,16 @@ public class BookServiceImpl implements BookService {
     @Override
     public List<Book> getBooksByCategoryId(Long id) {
         return bookFactory.getBooksByCategoryId(id);
+    }
+
+    @Override
+    public List<Book> getThreeRandomBooks() {
+
+        List<Book> myList = bookFactory.getAllBooks();
+        Collections.shuffle(myList);
+
+        int randomBooksLimit = 3;
+
+        return myList.subList(0, randomBooksLimit);
     }
 }

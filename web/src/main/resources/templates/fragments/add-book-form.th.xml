@@ -1,0 +1,34 @@
+<thlogic>
+
+    <attr sel="#add-book-form-fragment"
+          th:fragment="add-book-form-fragment"
+          th:remove="tag"/>
+
+    <attr sel="#add-book-form"
+          th:action="@{/add-book-action}"
+          th:object="${book}"/>
+
+    <attr sel="#inputAuthor"
+          th:field="*{author}"/>
+
+    <attr sel="#inputTitle"
+          th:field="*{title}"/>
+
+    <attr sel="#inputYear"
+          th:field="*{year}"/>
+
+    <attr sel="#inputStock"
+          th:field="*{stock}"/>
+
+    <attr sel="#inputPrice"
+          th:field="*{price}"/>
+
+    <attr sel="#inputCategory"
+          th:field="*{category}"/>
+
+    <attr sel="#categoryOption"
+          th:each="category : ${allCategories}"
+          th:value="${category.id}"
+          th:text="${category.name}"/>
+
+</thlogic>
